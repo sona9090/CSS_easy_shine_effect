@@ -1,0 +1,30 @@
+body {
+  background: black;
+}
+
+#image_container {
+  width: 400px;
+  position: relative;
+  overflow: hidden;
+  margin: 30px auto 0 auto;
+  cursor: pointer;
+}
+
+#image {
+  width: 100%;
+}
+
+#image_container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1200px;
+  height: 100%;
+  background: linear-gradient(45deg, transparent 52%, white, transparent 57%);
+  transition: all 3s;
+}
+
+#image_container:hover::after {
+  left: -900px;
+}
